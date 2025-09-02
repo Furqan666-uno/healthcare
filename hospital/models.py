@@ -27,7 +27,7 @@ class CustomUserManager(BaseUserManager):
     
 
 class User(AbstractUser):
-    username= None
+    username= None # bcz we are using email for authentication
     email= models.EmailField(unique=True)
     name= models.CharField(max_length=100)
 
