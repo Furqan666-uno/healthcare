@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model, authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import Patient, Doctor, DoctorPatientMapping
 
-User= get_user_model()
+User= get_user_model() # because we can't User model as it uses AbstractUser, so we need get_user_model()
 
 
 class RegisterSerializer(serializers.ModelSerializer):
